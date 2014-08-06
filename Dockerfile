@@ -10,3 +10,6 @@ ENV HOME /root
 ENV GOPATH /root/go
 ENV GOROOT /usr/local/go
 ENV PATH $PATH:$GOPATH/bin:$GOROOT/bin
+
+# Install gox
+RUN go get github.com/mitchellh/gox && gox -build-toolchain
